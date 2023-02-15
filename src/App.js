@@ -1,7 +1,8 @@
-import './App.css';
-import Header from './Header';
-import Main from './Main';
-import Footer from './Footer';
+import './css/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './js/Header';
+import Main from './js/Main';
+import Footer from './js/Footer';
 
 function App() {
   return (

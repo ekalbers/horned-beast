@@ -32,6 +32,6 @@
 
 ### Start time: 3:35 pm EST
 
-### Finish time: _____
+### Finish time: 4:27
 
-### Actual time needed to complete: _____
+### Actual time needed to complete: 52 minutes

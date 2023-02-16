@@ -1,4 +1,4 @@
-# Lab 02
+# Lab 03
 
 ## Time Spent on Each Feature
 
@@ -6,32 +6,8 @@
 
 ### Estimate of time needed to complete: 20 minutes
 
-### Start time: 2:36 pm EST
+### Start time: around 5:00 pm EST
 
-### Finish time: 2:52
+### Finish time: around 1:00 the next day
 
-### Actual time needed to complete: 16 minutes
-
-###
-
-### Number and name of feature: Feature #2: Allow Users to Favorite Individual Beasts
-
-### Estimate of time needed to complete: 20 minutes
-
-### Start time: 2:57 pm EST
-
-### Finish time: 3:33
-
-### Actual time needed to complete: 36 minutes
-
-###
-
-### Number and name of feature: Feature #3: Bootstrap
-
-### Estimate of time needed to complete: 45 minutes
-
-### Start time: 3:35 pm EST
-
-### Finish time: 4:27
-
-### Actual time needed to complete: 52 minutes
+### Actual time needed to complete: real time working was probably around 6-7 hours

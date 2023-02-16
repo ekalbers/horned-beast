@@ -1,15 +1,21 @@
 import HornedBeast from './HornedBeast';
-import data from '../data.json'
+import data from '../data.json';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 function Main() {
     return (
         <main>
-            {data.map(item => {
-                return <HornedBeast
-                    title={item.title}
-                    imageUrl={item.image_url}
-                    description={item.description} />;
-            })}
+            <Container fluid="sm">
+                <Row>
+                    {data.map(item => {
+                        return <HornedBeast
+                            title={item.title}
+                            imageUrl={item.image_url}
+                            description={item.description} />;
+                    })}
+                </Row>
+            </Container>
         </main >
     )
 }

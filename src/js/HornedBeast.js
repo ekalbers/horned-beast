@@ -2,7 +2,6 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
-import SelectedBeast from './SelectedBeast';
 
 class HornedBeast extends React.Component {
     constructor(props) {
@@ -22,8 +21,10 @@ class HornedBeast extends React.Component {
         console.log(this.props.index);
         this.props.updateState(this.props.index);
         console.log(this.props.index);
-        this.props.createModal(this.props.index);
+        let modal = this.props.createModal(this.props.index);
         console.log('pictureClick');
+        console.log(modal);
+        return modal;
     }
 
     render() {
@@ -33,7 +34,7 @@ class HornedBeast extends React.Component {
                     <Card.Img variant="top"
                         src={this.props.imageUrl}
                         title={this.props.title}
-                        onClick={this.pictureClick} />
+                        onClick={this.pictureClick}></Card.Img>
                     <Card.Header >{this.props.title}</Card.Header>
                     {/* <Card.Body>
                         <Card.Text>{this.props.description}</Card.Text>

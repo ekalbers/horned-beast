@@ -21,9 +21,9 @@ class App extends React.Component {
 
   createModal = index => {
     console.log('createModal');
-    /* console.log(data[index].title);
+    console.log(data[index].title);
     console.log(data[index].image_url);
-    console.log(data[index].description) */
+    console.log(data[index].description)
     return (
       <SelectedBeast
         title={data[this.state.index].title}

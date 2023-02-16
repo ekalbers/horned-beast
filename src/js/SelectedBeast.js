@@ -14,8 +14,8 @@ class SelectedBeast extends React.Component {
 
     render() {
         return (
-            <Container>
-                < Modal centered>
+            <div className="modal show" style={{ display: 'block', position: 'initial' }}>
+                < Modal centered show={true} onHide={false}>
                     {/* <img src={this.props.image_url} 
                 title={this.props.title} 
                 alt={this.props.title} 
@@ -30,7 +30,7 @@ class SelectedBeast extends React.Component {
                         <Button onClick={this.props.onHide}>Close</Button>
                     </Modal.Footer>
                 </Modal >
-            </Container>
+            </div>
         )
     }
 }

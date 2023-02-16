@@ -4,10 +4,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 class Main extends React.Component {
-    constructor(props) {
-        super(props);
-        console.log(props);
-    }
 
     render() {
         return (
@@ -18,8 +14,9 @@ class Main extends React.Component {
                             return <HornedBeast
                                 title={item.title}
                                 index={item._id - 1}
+                                key={item._id}
                                 imageUrl={item.image_url}
-                                createModal={this.props.createModal}
+                                showModal={this.props.showModal}
                                 updateState={this.props.updateState}
                                 description={item.description} />;
                         })}

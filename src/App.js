@@ -10,26 +10,22 @@ import SelectedBeast from './js/SelectedBeast';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { index: 0 };
+    this.state = {
+      index: 0,
+      show: false
+    };
   }
 
   updateState = (index) => {
-    console.log('updateState');
-    this.state.index = index;
-    console.log(this.state.index);
+    this.setState({ index: index });
   }
 
-  createModal = index => {
-    console.log('createModal');
-    /* console.log(data[index].title);
-    console.log(data[index].image_url);
-    console.log(data[index].description) */
-    return (
-      <SelectedBeast
-        title={data[this.state.index].title}
-        imageUrl={data[this.state.index].image_url}
-        description={data[this.state.index].description} />
-    );
+  showModal = () => {
+    this.setState({ show: true });
+  }
+
+  closeModal = () => {
+    this.setState({ show: false });
   }
 
   render() {
@@ -37,7 +33,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Main data={data} updateState={this.updateState} createModal={this.createModal} />
+        <Main data={data} updateState={this.updateState} showModal={this.showModal} />
+        <SelectedBeast
+          title={data[this.state.index].title}
+          imageUrl={data[this.state.index].image_url}
+          description={data[this.state.index].description}
+          show={this.state.show}
+          closeModal={this.closeModal} />
         <Footer />
       </div>
     );

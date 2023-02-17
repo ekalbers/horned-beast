@@ -12,8 +12,24 @@ class App extends React.Component {
     super();
     this.state = {
       index: 0,
-      show: false
+      show: false,
+      horns: 0,
     };
+  }
+
+  updateHorns = number => {
+    this.setState({ horns: Number(number) });
+    console.log(number);
+  }
+
+  hornsArray() {
+    let x = [];
+    data.forEach(item => {
+      if (!x.includes(item.horns)) {
+        x.push(item.horns);
+      }
+    })
+    return x;
   }
 
   updateState = (index) => {
@@ -32,14 +48,25 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Header />
-        <Main data={data} updateState={this.updateState} showModal={this.showModal} />
+
+        <Header
+          horns={this.state.horns}
+          hornsArray={this.hornsArray}
+          updateHorns={this.updateHorns} />
+
+        <Main
+          data={data}
+          horns={this.state.horns}
+          updateState={this.updateState}
+          showModal={this.showModal} />
+
         <SelectedBeast
           title={data[this.state.index].title}
           imageUrl={data[this.state.index].image_url}
           description={data[this.state.index].description}
           show={this.state.show}
           closeModal={this.closeModal} />
+
         <Footer />
       </div>
     );

@@ -11,14 +11,20 @@ class Main extends React.Component {
                 <Container fluid="sm">
                     <Row>
                         {this.props.data.map(item => {
-                            return <HornedBeast
-                                title={item.title}
-                                index={item._id - 1}
-                                key={item._id}
-                                imageUrl={item.image_url}
-                                showModal={this.props.showModal}
-                                updateState={this.props.updateState}
-                                description={item.description} />;
+                            console.log(this.props);
+                            if (item.horns === this.props.horns || this.props.horns === 0) {
+
+                                return (<HornedBeast
+                                    title={item.title}
+                                    index={item._id - 1}
+                                    key={item._id}
+                                    imageUrl={item.image_url}
+                                    showModal={this.props.showModal}
+                                    updateState={this.props.updateState}
+                                    description={item.description} />);
+                            } else {
+                                return null;
+                            }
                         })}
                     </Row>
                 </Container>

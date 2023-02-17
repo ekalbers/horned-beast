@@ -13,7 +13,6 @@ class Main extends React.Component {
                         {this.props.data.map(item => {
                             console.log(this.props);
                             if (item.horns === this.props.horns || this.props.horns === 0) {
-
                                 return (<HornedBeast
                                     title={item.title}
                                     index={item._id - 1}

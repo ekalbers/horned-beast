@@ -29,7 +29,9 @@ class HornedBeast extends React.Component {
                         title={this.props.title}
                         onClick={this.pictureClick} />
                     <Card.Header >{this.props.title}</Card.Header>
-                    <Button onClick={this.trackFavorites}>♥ {this.state.favorites}</Button>
+                    <Button onClick={this.trackFavorites}>
+                        ♥ {this.state.favorites}
+                    </Button>
                 </Card>
             </Col>
         );
